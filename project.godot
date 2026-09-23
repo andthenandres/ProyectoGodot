@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="ProyectoClaseDesdeCero"
+run/main_scene="uid://difyymy441o8a"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dolx2y3bp6qv1"
-path="res://.godot/imported/Rick.png-f0043a9474fcd6e41c48f62bd1b23b06.ctex"
+uid="uid://bvgormo2u5f3m"
+path="res://.godot/imported/rick_sanchez_sprite_sheet_by_ducksysys_dfita7g.png-2dfb6afedc36ffe40f96ff932e44d507.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Rick.png"
-dest_files=["res://.godot/imported/Rick.png-f0043a9474fcd6e41c48f62bd1b23b06.ctex"]
+source_file="res://Sprites/Personajes/rick_sanchez_sprite_sheet_by_ducksysys_dfita7g.png"
+dest_files=["res://.godot/imported/rick_sanchez_sprite_sheet_by_ducksysys_dfita7g.png-2dfb6afedc36ffe40f96ff932e44d507.ctex"]
 
 [params]
 
