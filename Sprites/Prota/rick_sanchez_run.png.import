@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b04r85ryngvtk"
-path="res://.godot/imported/rick_sanchez_idle.png-5b95ca0d6192ccacf04845c8ca50cfce.ctex"
+uid="uid://b15oba0o4l0ya"
+path="res://.godot/imported/rick_sanchez_run.png-218a29dd7f04d0aa26c2625c85bfe7b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Personajes/rick_sanchez_idle.png"
-dest_files=["res://.godot/imported/rick_sanchez_idle.png-5b95ca0d6192ccacf04845c8ca50cfce.ctex"]
+source_file="res://Sprites/Prota/rick_sanchez_run.png"
+dest_files=["res://.godot/imported/rick_sanchez_run.png-218a29dd7f04d0aa26c2625c85bfe7b7.ctex"]
 
 [params]
 

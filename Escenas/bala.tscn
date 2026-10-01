@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dovhau470c8at"]
+
+[ext_resource type="Texture2D" uid="uid://r26hc4ytjpjd" path="res://Sprites/Enemigo/SMW_Artwork_Bullet_Bill.png" id="1_yxa4x"]
+
+[node name="Node2D" type="Node2D" unique_id=462202701]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=670060154]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1523765545]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=734545336]
+texture = ExtResource("1_yxa4x")

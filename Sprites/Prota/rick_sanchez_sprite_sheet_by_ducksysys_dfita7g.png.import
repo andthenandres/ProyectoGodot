@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8l6828ufetgw"
-path="res://.godot/imported/rick_sanchez_taunting.png-3dade13188d37824a4e7c7010ac4efd2.ctex"
+uid="uid://bvgormo2u5f3m"
+path="res://.godot/imported/rick_sanchez_sprite_sheet_by_ducksysys_dfita7g.png-a1ad8bc00c9e1f4df687dc6b6a101984.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Personajes/rick_sanchez_taunting.png"
-dest_files=["res://.godot/imported/rick_sanchez_taunting.png-3dade13188d37824a4e7c7010ac4efd2.ctex"]
+source_file="res://Sprites/Prota/rick_sanchez_sprite_sheet_by_ducksysys_dfita7g.png"
+dest_files=["res://.godot/imported/rick_sanchez_sprite_sheet_by_ducksysys_dfita7g.png-a1ad8bc00c9e1f4df687dc6b6a101984.ctex"]
 
 [params]
 

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://730vjoin3kim"]
+
+[ext_resource type="Texture2D" uid="uid://boy50i2l2iuo6" path="res://Sprites/Ambiente/using_tilesets_kenney_abstract_platformer_tile_sheet.webp" id="1_gx8x6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aui74"]
+size = Vector2(62, 62)
+
+[node name="SueloFlotante" type="Node2D" unique_id=695731254]
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=1816504958]
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D" unique_id=767842252]
+texture = ExtResource("1_gx8x6")
+region_enabled = true
+region_rect = Rect2(256.8305, 192.55173, 64.11221, 63.58087)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=848558655]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_aui74")

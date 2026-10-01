@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b15oba0o4l0ya"
-path="res://.godot/imported/rick_sanchez_run.png-7a21da9b6a9a67f3f5ef0c506317649b.ctex"
+uid="uid://b3iy4crdyqkxv"
+path="res://.godot/imported/rick_sanchez_walk.png-8983eedb683396e0b081b6b54c086a88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Personajes/rick_sanchez_run.png"
-dest_files=["res://.godot/imported/rick_sanchez_run.png-7a21da9b6a9a67f3f5ef0c506317649b.ctex"]
+source_file="res://Sprites/Prota/rick_sanchez_walk.png"
+dest_files=["res://.godot/imported/rick_sanchez_walk.png-8983eedb683396e0b081b6b54c086a88.ctex"]
 
 [params]
 

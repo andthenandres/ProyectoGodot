@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvgormo2u5f3m"
-path="res://.godot/imported/rick_sanchez_sprite_sheet_by_ducksysys_dfita7g.png-2dfb6afedc36ffe40f96ff932e44d507.ctex"
+uid="uid://b4w8c35wvmxg"
+path="res://.godot/imported/Old Man-death.png-94c455809f12a5600e88ed5a824af4c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Personajes/rick_sanchez_sprite_sheet_by_ducksysys_dfita7g.png"
-dest_files=["res://.godot/imported/rick_sanchez_sprite_sheet_by_ducksysys_dfita7g.png-2dfb6afedc36ffe40f96ff932e44d507.ctex"]
+source_file="res://Sprites/Enemigo/Old Man-death.png"
+dest_files=["res://.godot/imported/Old Man-death.png-94c455809f12a5600e88ed5a824af4c3.ctex"]
 
 [params]
 

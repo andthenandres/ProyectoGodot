@@ -4,6 +4,7 @@ const WALKING = 75
 const SPRINT = 225
 var areaMuerte = false
 var baile = false
+var velocidad_actual = WALKING
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,8 +15,27 @@ func _physics_process(delta: float) -> void:
 	#Gravedad
 	if(!is_on_floor()):
 		velocity = velocity + get_gravity() * delta
+	
+	#RayCast2D
+	#if $RayCastDerecha2D.is_colliding():
+	#	velocidad_actual = -WALKING
+		
+	#if $RayCastIzquierda2D.is_colliding():
+	#	velocidad_actual = WALKING
+	
+	#if not $RayCastSueloIzquierda2D.is_colliding():
+		#velocidad_actual = WALKING
+	
+	#if not $RayCastSueloDerecha2D.is_colliding():
+		#velocidad_actual = -WALKING
+	#else:
+		#velocity.x = velocidad_actual
+	
+	
 	#Salto
 	if(Input.is_action_just_pressed("ui_up") and is_on_floor()):
+		velocity.y = JUMP
+	if(Input.is_action_just_pressed("ui_up") and not is_on_floor()):
 		velocity.y = JUMP
 	#sprint	
 	elif(Input.is_action_pressed("Shift") and Input.is_action_pressed("ui_right")):

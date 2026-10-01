@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c660x6ko6ql4r"
-path="res://.godot/imported/Cielo.png-f60bb15cea1cfb4ba0691f346de72ae0.ctex"
+uid="uid://dpwpuc8h3qgc6"
+path="res://.godot/imported/rick_sanchez_jump.png-98caccea4bdd760a428b566dc0ccb8fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Cielo.png"
-dest_files=["res://.godot/imported/Cielo.png-f60bb15cea1cfb4ba0691f346de72ae0.ctex"]
+source_file="res://Sprites/Prota/rick_sanchez_jump.png"
+dest_files=["res://.godot/imported/rick_sanchez_jump.png-98caccea4bdd760a428b566dc0ccb8fa.ctex"]
 
 [params]
 
