@@ -17,3 +17,5 @@ region_rect = Rect2(256.8305, 192.55173, 64.11221, 63.58087)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=848558655]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_aui74")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatableBody2D" unique_id=1592695544]
