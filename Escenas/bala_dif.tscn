@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cc2k84p16xpwo"]
+
+[ext_resource type="Script" uid="uid://bsob7e06f0uiy" path="res://BalaDif.gd" id="1_xupal"]
+[ext_resource type="Texture2D" uid="uid://r26hc4ytjpjd" path="res://Sprites/Enemigo/SMW_Artwork_Bullet_Bill.png" id="2_3fr00"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_smjd1"]
+radius = 47.0
+height = 162.12415
+
+[node name="BalaDif" type="Node2D" unique_id=1041772314]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1228372445]
+position = Vector2(900, 0)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1989253540]
+position = Vector2(6, -1)
+rotation = 1.5567999
+shape = SubResource("CapsuleShape2D_smjd1")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1840097152]
+collision_layer = 2
+script = ExtResource("1_xupal")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2109387813]
+position = Vector2(900, 0)
+texture = ExtResource("2_3fr00")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1079837905]
+position = Vector2(907, -3.9999962)
+rotation = 1.5567999
+shape = SubResource("CapsuleShape2D_smjd1")
+
+[connection signal="body_entered" from="Area2D" to="StaticBody2D" method="_on_area_2d_body_entered"]

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://572q6ld8301r"]
+
+[ext_resource type="Script" uid="uid://clvxxdo1ykj4f" path="res://Escenas/trump.gd" id="1_4x0qj"]
+[ext_resource type="Texture2D" uid="uid://520ekjnhf5l1" path="res://Sprites/Enemigo/DonaldTrump/donald_trump_sprite_sheet_by_animationrewind_daeu01j-fullview.png" id="2_tsjvd"]
+[ext_resource type="Texture2D" uid="uid://b27lvtdtwtxyq" path="res://Sprites/Enemigo/DonaldTrump/Dollar.png" id="3_gnr4i"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xn0d4"]
+radius = 39.0
+height = 140.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xn0d4"]
+size = Vector2(494, 278)
+
+[node name="Node2D" type="Node2D" unique_id=1628841883]
+script = ExtResource("1_4x0qj")
+
+[node name="Enemigo2D" type="Area2D" parent="." unique_id=1614158257]
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemigo2D" unique_id=580863845]
+texture = ExtResource("2_tsjvd")
+hframes = 7
+vframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemigo2D" unique_id=1007065245]
+shape = SubResource("CapsuleShape2D_xn0d4")
+
+[node name="NodeBola" type="Node2D" parent="." unique_id=1366019089]
+scale = Vector2(0.15, 0.15)
+
+[node name="BolaMortal" type="StaticBody2D" parent="NodeBola" unique_id=1542790712]
+position = Vector2(900, 900)
+collision_layer = 2
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="NodeBola/BolaMortal" unique_id=2135743759]
+texture = ExtResource("3_gnr4i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NodeBola/BolaMortal" unique_id=574265632]
+position = Vector2(-8, 20)
+shape = SubResource("RectangleShape2D_xn0d4")
+
+[connection signal="body_entered" from="Enemigo2D" to="." method="_on_cuerpo_enemigo_2d_body_entered"]

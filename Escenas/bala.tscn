@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://r26hc4ytjpjd" path="res://Sprites/Enemigo/SMW_Artwork_Bullet_Bill.png" id="1_yxa4x"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y6ye3"]
+radius = 48.02484
+height = 145.97118
+
 [sub_resource type="Animation" id="Animation_yxa4x"]
 length = 0.001
 tracks/0/type = "value"
@@ -46,6 +50,9 @@ _data = {
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1523765545]
+position = Vector2(5.000001, 0.9999981)
+rotation = 1.5772529
+shape = SubResource("CapsuleShape2D_y6ye3")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=734545336]
 texture = ExtResource("1_yxa4x")
