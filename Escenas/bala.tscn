@@ -2,11 +2,54 @@
 
 [ext_resource type="Texture2D" uid="uid://r26hc4ytjpjd" path="res://Sprites/Enemigo/SMW_Artwork_Bullet_Bill.png" id="1_yxa4x"]
 
-[node name="Node2D" type="Node2D" unique_id=462202701]
+[sub_resource type="Animation" id="Animation_yxa4x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_r8vkm"]
+resource_name = "bullet"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(6690, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_my55k"]
+_data = {
+&"RESET": SubResource("Animation_yxa4x"),
+&"bullet": SubResource("Animation_r8vkm")
+}
+
+[node name="bala" type="Node2D" unique_id=462202701]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=670060154]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1523765545]
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=734545336]
 texture = ExtResource("1_yxa4x")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=178228104]
+libraries/ = SubResource("AnimationLibrary_my55k")
+autoplay = &"bullet"

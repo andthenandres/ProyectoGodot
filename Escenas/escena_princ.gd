@@ -12,26 +12,18 @@ func _ready() -> void:
 
 #Fisicas
 func _physics_process(delta: float) -> void:
+	#AreaMuerte
+	if(areaMuerte):
+		#puedo igualar las 2 vel a 0 o poner gravedad y poner a 0 la hor
+		if not is_on_floor():
+			velocity += get_gravity() * delta
+		velocity.x = 0
+		move_and_slide()
+		return
+	
 	#Gravedad
 	if(!is_on_floor()):
 		velocity = velocity + get_gravity() * delta
-	
-	#RayCast2D
-	#if $RayCastDerecha2D.is_colliding():
-	#	velocidad_actual = -WALKING
-		
-	#if $RayCastIzquierda2D.is_colliding():
-	#	velocidad_actual = WALKING
-	
-	#if not $RayCastSueloIzquierda2D.is_colliding():
-		#velocidad_actual = WALKING
-	
-	#if not $RayCastSueloDerecha2D.is_colliding():
-		#velocidad_actual = -WALKING
-	#else:
-		#velocity.x = velocidad_actual
-	
-	
 	#Salto
 	if(Input.is_action_just_pressed("ui_up") and is_on_floor()):
 		velocity.y = JUMP
@@ -56,9 +48,6 @@ func _physics_process(delta: float) -> void:
 		baile = true
 	#DUDA: Porque es necesario poner el else: RESPUESTA, hay que volver a configurar la velocidad
 	 
-	
-	
-	
 	move_and_slide()
 	
 # Animaciones
@@ -66,6 +55,7 @@ func _process(delta: float) -> void:
 	#AreaMuerte
 	if(areaMuerte):
 		$AnimatedSprite2D.play("dying")
+		return
 	#Salto
 	if(velocity.y < 0):
 		$AnimatedSprite2D.play("jumping")
@@ -83,7 +73,6 @@ func _process(delta: float) -> void:
 	elif(velocity.x == WALKING):
 		$AnimatedSprite2D.play("walking")
 		$AnimatedSprite2D.flip_h = false
-		
 	#Baile
 	elif(baile):
 		$AnimatedSprite2D.play("taunting")
@@ -98,10 +87,18 @@ func _rockfall(delta: float) -> void:
 			velocity += get_gravity() * delta	
 			
 
+#la palmas
 func _on_area_muerte_body_entered(body: Node2D) -> void:	
-	areaMuerte = true
+	if not areaMuerte:
+		areaMuerte = true
+		morir()
 		
+		
+func morir() -> void:
+	# Se espera para que 
+	await $AnimatedSprite2D.animation_finished
 
-
-func _on_area_muerte_body_exited(body: Node2D) -> void:
-	areaMuerte = false
+	#el juego se cierra (acordarse de quitar el loop en la animacion)
+	get_tree().quit()	
+	#con esto el juego se reinicia
+	#get_tree().reload_current_scene()	

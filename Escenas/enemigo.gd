@@ -1,24 +1,45 @@
 extends CharacterBody2D
+
 const WALKING = 75
 var velocidad_actual = WALKING
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
+
 func _physics_process(delta: float) -> void:
-	#RayCast2D
-	if $RayCastDerecha2D.is_colliding():
-		velocidad_actual = -WALKING
-		
-	if $RayCastIzquierda2D.is_colliding():
-		velocidad_actual = WALKING
-	#if not $RayCastSueloIzquierda2D.is_colliding():
-	#	velocidad_actual = WALKING
-	
-	#if not $RayCastSueloDerecha2D.is_colliding():
-	#	velocidad_actual = -WALKING
+	#gravedad
+	if not is_on_floor():
+		velocity += get_gravity() * delta
+
+	#RayCasts hor
+	if $RayCastDerecha2D.is_colliding() and velocidad_actual == WALKING:
+		_girar_izquierda()
+	elif $RayCastIzquierda2D.is_colliding() and velocidad_actual == -WALKING:
+		_girar_derecha()
+
+	# RayCasts ver
+	if is_on_floor():
+		if not $RayCastSueloDerecha2D.is_colliding() and velocidad_actual == WALKING:
+			_girar_izquierda()
+		elif not $RayCastSueloIzquierda2D.is_colliding() and velocidad_actual == -WALKING:
+			_girar_derecha()
+
 	velocity.x = velocidad_actual
 	move_and_slide()
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta: float) -> void:
-	pass
+	if(velocity.x > 0):
+		_girar_derecha()
+	else:
+		_girar_izquierda()
+
+#girar el sprite
+func _girar_izquierda():
+	velocidad_actual = -WALKING
+	$AnimatedSprite2D.play("walking")
+	$AnimatedSprite2D.flip_h = true
+
+func _girar_derecha():
+	velocidad_actual = WALKING
+	$AnimatedSprite2D.play("walking")
+	$AnimatedSprite2D.flip_h = false
