@@ -1,7 +1,7 @@
 extends CharacterBody2D       
 const JUMP = -400
-const WALKING = 75
-const SPRINT = 225
+const WALKING = 100
+const SPRINT = 300
 var areaMuerte = false
 var baile = false
 var velocidad_actual = WALKING
